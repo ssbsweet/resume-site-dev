@@ -2,7 +2,7 @@
   <div id="app">
     <div class="row">
       <Header />
-      <div class="col s12 m10 offset-m1">
+      <div class="col m10 offset-m1">
         <a v-for="tab in tabs" :key="tab" @click="selected = tab.elem;":class="['tab-btn', { active: selected === tab.elem }]">{{ tab.name }}</a>
       </div>
       <Profession />
@@ -59,6 +59,7 @@ export default {
 .tab-btn {
   color: #0088cc;
   cursor: pointer;
+    display: inline-table;
   padding: 10px 30px;
   margin-left: 20px;
 }
